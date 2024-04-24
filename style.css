@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+
+  /* Colors */
+
+  /* Primary */
+
+  --pale-blue  : hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+
+  --verypale-blue   : hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue       : hsl(223, 47%, 23%);
+
+}
+
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size      : 62.5%;
+  overflow-x     : hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size  : 1.6rem;
+  font-family: "Red Hat Display", serif;
+
+}
+
+main {
+  width              : 100%;
+  min-height         : 100vh;
+  background-color   : var(--pale-blue);
+  background-image   : url(./images/pattern-background-desktop.svg);
+  background-repeat  : no-repeat;
+  background-position: top;
+  background-size    : 100vw 48.6vh;
+  display            : flex;
+  flex-direction     : column;
+  justify-content    : center;
+  align-items        : center;
+}
+
+.container {
+  max-width       : 45rem;
+  max-height      : 69.6rem;
+  background-color: white;
+  border-radius   : 20px;
+  text-align      : center;
+  box-shadow      : 0 40px 30px -10px rgba(23, 65, 97, 0.1);
+}
+
+img {
+  width                  : 100%;
+  border-top-left-radius : 20px;
+  border-top-right-radius: 20px;
+}
+
+h1 {
+  font-size  : 2.8rem;
+  color      : var(--dark-blue);
+  font-weight: 900;
+}
+
+p {
+  font-size  : 1.65rem;
+  line-height: 25.6px;
+  text-align : center;
+  color      : var(--desaturated-blue);
+}
+
+.content {
+  padding       : 4.2rem 4.8rem;
+  display       : flex;
+  flex-direction: column;
+  gap           : 17px;
+}
+
+.price-container {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  background-color: var(--verypale-blue);
+  padding         : 2.4rem;
+  border-radius   : 12px;
+  margin-bottom   : 1.7rem;
+}
+
+.plan-container {
+  display    : flex;
+  align-items: center;
+  gap        : 20px;
+}
+
+.annual-plan {
+  font-size  : 1.62rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1.68rem;
+  color    : var(--desaturated-blue);
+}
+
+a {
+  font-size      : 1.4rem;
+  font-weight    : bold;
+  text-decoration: none;
+  border-bottom  : 1px solid #3829E0;
+}
+
+a:hover {
+  color        : var(--desaturated-blue);
+  border-bottom: 0;
+}
+
+button {
+  border          : none;
+  padding         : 1.5rem 5.2rem;
+  font-size       : 1.5rem;
+  font-weight     : bold;
+  background-color: inherit;
+  color           : var(--desaturated-blue);
+  cursor          : pointer;
+}
+
+.payment-btn {
+  color           : white;
+  background-color: var(--bright-blue);
+  border-radius   : 12px;
+  box-shadow      : 0 20px 20px 0px rgba(39, 10, 170, 0.17);
+}
+
+.payment-btn:hover {
+  cursor          : pointer;
+  background-color: hsl(245, 75%, 52%, .5);
+}
+
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+
+@media(max-width:500px) {
+  main {
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-size : 100vw 100vh;
+  }
+
+  .container {
+    margin: 5rem 2rem;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .price-container {
+    padding: 1rem;
+  }
+
+  .annual-plan {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.45rem;
+  }
+}
